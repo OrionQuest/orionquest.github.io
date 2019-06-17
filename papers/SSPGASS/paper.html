@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SPGrid: a sparse paged grid structure applied to adaptive smoke simulation</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>SPGrid: a sparse paged grid structure applied to adaptive smoke simulation</h1>
+<h2>Rajsekhar Setaluri, Mridul Aanjaneya, Sean Bauer and Eftychios Sifakis
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH Asia proceedings), 33, 6, 205:1-12 (2014)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/smoke-past-sphere.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We introduce a new method for fluid simulation on high-resolution adaptive grids which rivals the throughput and parallelism potential of methods based on uniform grids. Our enabling contribution is SPGrid, a new data structure for compact storage and efficient stream processing of sparsely populated uniform Cartesian grids. SPGrid leverages the extensive hardware acceleration mechanisms inherent in the x86 Virtual Memory Management system to deliver sequential and stencil access bandwidth comparable to dense uniform grids. Second, we eschew tree-based adaptive data structures in favor of storing simulation variables in a pyramid of sparsely populated uniform grids, thus avoiding the cost of indirect memory access associated with pointer-based representations. We show how the costliest algorithmic kernels of fluid simulation can be implemented as a composition of two kernel types: (a) stencil operations on a single sparse uniform grid, and (b) structured data transfers between adjacent levels of resolution, even when modeling non-graded octrees. Finally, we demonstrate an adaptive multigrid-preconditioned Conjugate Gradient solver that achieves resolution-independent convergence rates while admitting a lightweight implementation with a modest memory footprint. Our method is complemented by a new interpolation scheme that reduces dissipative effects and simplifies dynamic grid adaptation. We demonstrate the efficacy of our method in end-to-end simulations of smoke flow.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SSPGASS/SPGrid.pdf">Paper</a> | <a href="bib/SSPGASS.html">BibTeX</a> | <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SSPGASS/SPGrid.mov">Video</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls" poster="images/movie-still.jpg">
+            <source src="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SSPGASS/SPGrid.mov" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SSPGASS/SPGrid.mov">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
