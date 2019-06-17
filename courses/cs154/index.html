@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>CS 154</title>
+<link rel="stylesheet" href="course.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="computational-topology-an-introduction">
+<h1 class="title">Introduction to Automata Theory</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Time:</th><td class="field-body">1:15 - 3:05pm, Tuesdays and Thursdays, Summer 2012.</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Place:</th><td class="field-body">Skilling Auditorium</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Instructor:</th><td class="field-body"><a class="reference external" href="http://pages.cs.wisc.edu/~aanjneya/">Mridul Aanjaneya</a>  (<a class="reference external" href="mailto:aanjneya&#64;stanford.edu">aanjneya&#64;stanford.edu</a>)</td>
+<tr class="field"><th class="docinfo-name">Office hours:</th><td class="field-body">2:00PM - 4:00PM, Gates 206 (Mondays)</td>
+<tr class="field"><th class="docinfo-name">TA:</th><td class="field-body"><a class="reference external" href="http://www.stanford.edu/~skandel/">Sean Kandel</a>  (<a class="reference external" href="mailto:skandel&#64;cs.stanford.edu">skandel&#64;cs.stanford.edu</a>)</td>
+<tr class="field"><th class="docinfo-name">Office hours:</th><td class="field-body">6:00PM - 8:00PM, Gates 372 (Tuesdays and Thursdays)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="announcements">
+<h1>Announcements</h1>
+<blockquote>
+<ul class="simple">
+<li>Discussion is now open on <a class="reference external" href="http://www.lore.com">Lore</a> with access code: R4ML4Z.</li>
+<li>(07/03) <a class="reference external" href="homeworks/hw1.pdf">Homework 1</a> is out. Due on (07/11).</li>
+<li>(07/10) <a class="reference external" href="homeworks/hw2.pdf">Homework 2</a> is out. Due on (07/18).</li>
+<li>(07/17) <a class="reference external" href="homeworks/hw3.pdf">Homework 3</a> is out. Due on (07/25).</li>
+<li>(07/26) <a class="reference external" href="homeworks/hw4.pdf">Homework 4</a> is out. Due on (08/09).</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="schedule">
+<h1>Schedule</h1>
+<!-- This is a **tentative** schedule. -->
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Date</th>
+<th class="head">Topic</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Tue, Jun 26</td>
+<td>Introduction. Automata, Computability and Complexity.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapters 0,1.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec1.pdf">Lecture 1</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jun 28</td>
+<td>Nondeterminism and Epsilon Transitions.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 1.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec2.pdf">Lecture 2</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Jul 03</td>
+<td>Regular Expressions and Language Properties.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 1.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec3.pdf">Lecture 3</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jul 05</td>
+<td>The Pumping Lemma and Closure Properties.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 1.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec4.pdf">Lecture 4</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Jul 10</td>
+<td>Homomorphisms and Efficient State Minimization.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 1.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec5.pdf">Lecture 5</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jul 12</td>
+<td>Context-Free Languages and Parse Trees.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 2.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec6.pdf">Lecture 6</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Jul 17</td>
+<td>Ambiguous Grammars and Compactification.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 2.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec7.pdf">Lecture 7</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jul 19</td>
+<td>Normal Forms and Pushdown Automata.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 2.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec8.pdf">Lecture 8</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Jul 24</td>
+<td>Equivalence of CFG's and PDA's.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 2.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec9.pdf">Lecture 9</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jul 26</td>
+<td><a class="reference external" href="homeworks/midterm.pdf">Midterm</a>.</td>
+<td>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Aug 02</td>
+<td>Pumping Lemma and Closure Properties of CFL's.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 2.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec10.pdf">Lecture 10</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Aug 07</td>
+<td>Enumerations and Turing Machines.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 3.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec11.pdf">Lecture 11</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Aug 09</td>
+<td>Decidability.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 4.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec12.pdf">Lecture 12</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Aug 14</td>
+<td>NP-Completeness and Boolean Satisfiability.</td>
+<td><p class="first"><a class="citation-reference" href="#ms05" id="id1">[MS05]</a>  <a>Chapter 5.</a></p>
+<dl class="last docutils">
+<dt>Slides: <a class="reference external" href="lectures/lec13.pdf">Lecture 13</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Sat, Aug 18</td>
+<td><a class="reference external" href="homeworks/final.pdf">Final</a>.</td>
+<td>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="references">
+<h1>References</h1>
+<table class="docutils citation" frame="void" id="ms05" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id24">[MS05]</a></td><td>Michael Sipser. <a class="reference external" href="http://www-math.mit.edu/~sipser/book.html">Introduction to The Theory of Computation</a>. Course Technology, 2nd edition, 2005.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="hmu06" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[HMU06]</a></td><td>John E. Hopcroft, Rajeev Motwani and Jeffrey D. Ullman. <a class="reference external" href="http://www.amazon.com/Introduction-Automata-Languages-Computation-Edition/dp/0321455363/ref=dp_ob_title_bk">Introduction to Automata Theory, Languages, and Computation</a>. Addison Wesley, 3rd edition, 2006.</td></tr>
+</tbody>
+</table>
+<p class="acknowledgement"><small>Template credit goes to Dmitriy Morozov.</small></p>
+<!-- vim: ft=rst -->
+</div>
+</div>
+</body>
+</html>

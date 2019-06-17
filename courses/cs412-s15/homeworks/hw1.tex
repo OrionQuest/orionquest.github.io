@@ -1,0 +1,112 @@
+\documentclass{article}
+\author{}
+\usepackage{amscd, amssymb, amsthm, amsmath, graphicx, fancyhdr}
+\newtheorem{lemma}{Lemma}
+\newtheorem{openquestion}{Open question}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corrolary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{prob}{Problem}
+\title{CS412: Homework \#1}
+\author{Due: Tuesday, February 10th, 2015 (in class)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent Sum of all problems: 120$\%$, Maximum possible score: $100\%$.
+\vspace{.2in}
+
+\noindent For the following problems, even if you do not answer a given
+question, you are still allowed to use its result in order to answer a
+subsequent question.
+
+\begin{enumerate}
+\item
+$[20\%]$ Each of the following examples describes a fixed point iteration and a nonlinear
+equation. In each case, \emph{assuming that the fixed point iteration will
+converge}, show that the limit is a solution of the respective equation.
+\begin{enumerate}
+\item
+The iteration $x_{k+1}=\frac{ax_k^2-c}{2ax_k+b}$ and the equation $ax^2+bx+c=0$.
+\item
+The iteration $x_{k+1}=\frac{3x_k^2+a}{4x_k}$ and the equation $x^2-a=0$.
+\end{enumerate}
+
+\item
+$[30\%]$ Consider the following pairs, each containing one nonlinear equation and
+one iterative procedure:
+\begin{enumerate}
+\item
+The equation $e^x=x+2$ and the iterative method
+\begin{eqnarray*}
+x_{k+1}=e^{x_k}-2
+\end{eqnarray*}
+\item
+The equation $x^3=x^2+1$ and the iterative method
+\begin{eqnarray*}
+x_{k+1}=\frac{x_k}{1+x_k^2}
+\end{eqnarray*}
+\end{enumerate}
+For each case, examine if the given iterative procedure is an effective solution
+technique for the respective equation. In order for the method to be effective,
+it needs to (a) be guaranteed to converge and (b) converge to a solution of the
+given equation.
+
+\item
+$[30\%]$ Use Newton's method to generate an iterative process that converges to
+the following values:
+\begin{enumerate}
+\item
+Create an iterative procedure that computes the cube root $\sqrt[3]{a}$ of a
+given number $a$. You are \textbf{not allowed} to use roots in the formula.
+[Hint: The cube root is the solution of $x^3-a=0$.]
+\item
+Create an iterative procedure that computes the natural logarithm $\log a$ of a
+given number $a$. You are \textbf{not allowed} to use logarithms in the formula
+(exponentials are ok).
+\item
+Create an iterative procedure that computes the arc-tangent $\arctan(x)$ of a
+given number $x$ (remember, the arc-tangent of $x$ is the angle whose tangent
+equals $x$). You are \textbf{not allowed} to use inverse trigonometric functions
+in the formula (normal trigonometric functions such as $\sin$, $\cos$, $\tan$,
+etc., are ok).
+\end{enumerate}
+
+\item
+$[40\%]$ Consider the following procedure for solving the nonlinear equation
+$f(x)=0$:
+\begin{itemize}
+\item
+Start with an initial guess $x_0$.
+\item
+For $k=0,1,2,\ldots$ do the following:
+\begin{itemize}
+\item
+Compute the value that standard Newton's method would provide, and call it
+$\hat x_{k+1}$, i.e.,
+\begin{eqnarray*}
+\hat x_{k+1}=x_k-\frac{f(x_k)}{f'(x_k)}
+\end{eqnarray*}
+\item
+Compute the next approximation $x_{k+1}$ by averaging $x_k$ and $\hat x_{k+1}$,
+i.e.,
+\begin{eqnarray*}
+x_{k+1}=\frac{x_k+\hat x_{k+1}}{2}
+\end{eqnarray*}
+\end{itemize}
+\end{itemize}
+\begin{enumerate}
+\item
+$[10\%]$ Show that if this method converges, it will converge to a solution of
+$f(x)=0$.
+\item
+$[15\%]$ Show that this method converges under the same conditions as Newton's
+method.
+\item
+$[15\%]$ Determine the order of convergence of this method.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

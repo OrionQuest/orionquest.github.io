@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>CS 412</title>
+<link rel="stylesheet" href="course.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="computational-topology-an-introduction">
+<h1 class="title">Introduction to Numerical Methods</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Time:</th><td class="field-body">2:30PM - 3:45PM, Tuesdays and Thursdays, Spring 2015.</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Place:</th><td class="field-body">Engineering Hall, Room 2535</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Instructor:</th><td class="field-body"><a class="reference external" href="http://pages.cs.wisc.edu/~aanjneya/">Mridul Aanjaneya</a>  (<a class="reference external" href="mailto:aanjneya&#64;cs.wisc.edu">aanjneya&#64;cs.wisc.edu</a>)</td>
+<tr class="field"><th class="docinfo-name">Office:</th><td class="field-body">Computer Sciences building, Room 1349</td>
+<tr class="field"><th class="docinfo-name">Office hours:</th><td class="field-body">2:00PM - 4:00PM (Wednesdays)</td>
+<tr class="field"><th class="docinfo-name">TA:</th><td class="field-body"><a class="reference external" href="">Divy Vasal</a>  (<a class="reference external" href="mailto:divy&#64;cs.wisc.edu">divy&#64;cs.wisc.edu</a>)</td>
+<tr class="field"><th class="docinfo-name">Office:</th><td class="field-body">Computer Sciences building, Room 1302</td>
+<tr class="field"><th class="docinfo-name">Office hours:</th><td class="field-body">4:00PM - 6:00PM (Mondays)</td>
+</tr>
+</tbody>
+</table>
+<body>
+<br>
+<tr><b>Email policy:</b> You are welcome to email the instructor about class-related issues. Please start your subject line with "<b>CS412:</b>". However, please do not always count on an immediate reply. Although most questions will be answered quickly, in the worst case you will receive a reply during (or shortly after) the instructors' next scheduled office hours. It is also recommended to post homework-related questions on the discussion forum instead of emailing the instructor so that other fellow students can benefit from it.</tr>
+<br>
+<br>
+<tr><b>Office hours policy:</b> If you need to approach the instructor or the TA
+outside of their office hours, please schedule an appointment ahead of time.</tr>
+</tbody>
+<div class="section" id="announcements">
+<h1>Announcements</h1>
+<blockquote>
+<ul class="simple">
+<li>Discussion is now open on <a class="reference external" href="http://www.piazza.com">Piazza</a>.</li>
+<li>(01/27) <a class="reference external" href="homeworks/hw1.pdf">Homework #1</a> is out. Due on (02/10). (<a class="reference external" href="homeworks/hw1.tex">source</a>)</li>
+<li>(02/10) <a class="reference external" href="homeworks/hw2.pdf">Homework #2</a> is out. Due on (02/24). (<a class="reference external" href="homeworks/hw2.tex">source</a>)</li>
+<li>(03/07) <a class="reference external" href="exams/practice_midterm1.pdf">Practice midterm #1</a> (with solutions).</li>
+<li>(03/10) <a class="reference external" href="homeworks/hw3.pdf">Homework #3</a> is out. Due on (03/24). (<a class="reference external" href="homeworks/hw3.tex">source</a>)</li>
+<li>(03/11) <a class="reference external" href="exams/midterm1.pdf">Midterm #1</a> and its <a class="reference external" href="exams/midterm1_solutions.pdf">solutions</a>.</li>
+<li>(03/24) <a class="reference external" href="homeworks/hw4.pdf">Homework #4</a> is out. Due on (04/14). (<a class="reference external" href="homeworks/hw4.tex">source</a>)</li>
+<li>(04/13) <a class="reference external" href="exams/practice_midterm2.pdf">Practice midterm #2</a> (<a class="reference external" href="exams/practice_midterm2_solutions.pdf">solutions</a>).</li>
+<li>(04/13) <a class="reference external" href="exams/midterm2_2011.pdf">Midterm #2 (2011)</a> (<a class="reference external" href="exams/midterm2_2011_solutions.pdf">solutions</a>).</li>
+<li>(04/27) <a class="reference external" href="exams/midterm2.pdf">Midterm #2</a> and its <a class="reference external" href="exams/midterm2_solutions.pdf">solutions</a>.</li>
+<li>(05/04) <a class="reference external" href="exams/practice_final.pdf">Practice final</a> (<a class="reference external" href="exams/practice_final_solutions.pdf">solutions</a>).</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="schedule">
+<h1>Schedule</h1>
+<!-- This is a **tentative** schedule. -->
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Date</th>
+<th class="head">Topic</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Tue, Jan 20</td>
+<td>Introduction. Types of Errors.</td>
+<td>
+<p class="first">Reading: <a class="citation-reference" href="#mh02" id="id1">[MH02]</a>  <a>Sections 1.1-1.2.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture1.pdf">Lecture 1</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jan 22</td>
+<td>Number representations, truncation and rounding.</td>
+<td>
+<p class="first">Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 1.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture2.pdf">Lecture 2</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Jan 27</td>
+<td>Machine epsilon, Newton's method.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Sections 2.1,2.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 5.5.3</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture3.pdf">Lecture 3</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Jan 29</td>
+<td>Fixed point iteration.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 2.1</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 5.5.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture4.pdf">Lecture 4</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Feb 03</td>
+<td>Order of convergence, multiple roots.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 2.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 5.4</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture5.pdf">Lecture 5</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Feb 05</td>
+<td>Bisection search, Secant method.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Sections 2.2,2.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 5.5.1,5.5.4</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture6.pdf">Lecture 6</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Feb 10</td>
+<td>Secant method, interpolation.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 4.2</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.1</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture7.pdf">Lecture 7</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Feb 12</td>
+<td>Polynomial interpolation, monomial basis.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 4.2</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.3.1</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture8.pdf">Lecture 8</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Feb 17</td>
+<td>Lagrange interpolation, Newton interpolation.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Sections 4.3, 4.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 7.3.2, 7.3.3</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture9.pdf">Lecture 9</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Feb 19</td>
+<td>Newton interpolation, divided differences.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 4.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.3.3</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture10.pdf">Lecture 10</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Feb 24</td>
+<td>Accuracy of interpolation, Chebyshev points.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 4.5</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.3.5</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture11.pdf">Lecture 11</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Feb 26</td>
+<td>Piecewise polynomial interpolation.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 5.3</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture12.pdf">Lecture 12</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Mar 03</td>
+<td>Cubic spline interpolation.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 5.3</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.4.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture13.pdf">Lecture 13</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Mar 05</td>
+<td>Cubic Hermite splines.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 7.4.1</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture14.pdf">Lecture 14</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Mar 10</td>
+<td>
+<a class="reference external" href="exams/midterm1.pdf">Midterm #1</a>
+<dl class="last docutils">
+</td>
+<td>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Mar 12</td>
+<td>Vector and matrix norms.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 3.1</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 2.3.1-2.3.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture15.pdf">Lecture 15</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Mar 17</td>
+<td>Condition number, upper triangular systems.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 3.3</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 2.3.3-2.3.5</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture16.pdf">Lecture 16</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Mar 19</td>
+<td>LU decomposition.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 3.5</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 2.4.3-2.4.4</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture17.pdf">Lecture 17</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Mar 24</td>
+<td>Pivoting.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 3.4</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 2.4.5</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture18.pdf">Lecture 18</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Mar 26</td>
+<td>Jacobi and Gauss-Seidel methods. Normal equations.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 5.1</a> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp; <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 3.1-3.2.1</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture19.pdf">Lecture 19</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Apr 07</td>
+<td>QR factorization. Rectangle rule.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Section 3.4.5.</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture20.pdf">Lecture 20</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Apr 09</td>
+<td>Error Analysis. Midpoint/Trapezoidal rules.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 7.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture21.pdf">Lecture 21</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Apr 14</td>
+<td>Simpson's rule. Generalized error analysis.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#jk04" id="id1">[JK04]</a>  <a>Section 7.2</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture22.pdf">Lecture 22</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Apr 16</td>
+<td>Ordinary differential equations.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 9.1-9.3.1.</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture23.pdf">Lecture 23</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Apr 23</td>
+<td>
+<a class="reference external" href="exams/midterm2.pdf">Midterm #2</a>
+<dl class="last docutils">
+</td>
+<td>
+</dl>
+</td>
+</tr>
+<tr><td>Tue, Apr 28</td>
+<td>Stability of ordinary differential equations.</td>
+<td>
+<p class="first"> Reading: <a class="citation-reference" href="#mh02" id="id2">[MH02]</a>  <a>Sections 9.3.1-9.3.3.</a></p>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/lecture24.pdf">Lecture 24</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Thu, Apr 30</td>
+<td>Final review.</td>
+<td>
+<dl class="last docutils">
+<dt>Notes: <a class="reference external" href="lectures/review.pdf">Review Notes</a></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<div class="section" id="references">
+<h1>Grading policy</h1>
+<tr>Grades will be awarded based on bi-weekly homework, two 75 minute in-class
+midterms and a mandatory final exam.</tr>
+<br>
+<br>
+<tr>The final grade will be the <b>best</b> of the following two schemes:</tr>
+<br>
+<br>
+<tr>Scheme 1: 25%x(homework grade) + 20%x(1st midterm grade) + 20%x(2nd midterm grade) + 35%x(final exam grade)</tr>
+<br>
+<tr>Scheme 2: 25%x(homework grade) + 30%x(best of the 2 midterm grades) + 45%x(final exam grade)</tr>
+<br>
+<br>
+<tr>Missing a midterm does not disqualify a student from passing the class (best of the 2 grading schemes above will still apply) but you <b>must</b> take the final exam in order to pass the class. Please note the following exam times on your schedules:</tr>
+<br>
+<br>
+<tr>Midterm 1: Tuesday, March 10th, in class (2:30PM - 3:45PM)</tr>
+<br>
+<tr>Midterm 2: Thursday, April 23rd, in class (2:30PM - 3:45PM)</tr>
+<br>
+<tr>Final: Wednesday, May 13th, Noland 132 (7:45AM - 9:45AM)</tr>
+<br>
+<br>
+<tr>Homework problems will be posted every second week on this webpage, and will be due <b>at midnight</b> on the Tuesday lecture two weeks later. Please use the dropbox at Learn@UW for submission. All homeworks should be typed and no late homework will be accepted. In order to accommodate special unforseen circumstances that may prevent a student from turning in homework on time, the <b>one</b> homework assignment with the lowest grade will not be used in determining the homework grade average.</tr>
+<br>
+<br>
+<tr><b>Collaboration policy:</b> Students are welcome to collaborate with each
+other on homework problems. However, they must individually turn in their
+solutions and also mention the names of their collaborators on their homework.</tr>
+<br>
+<br>
+<tr><b>Typing resources:</b> Students can choose their favorite platform for
+typing out their homework, some commonly used softwares are <a href="http://products.office.com/en-us/word">Microsoft Word</a>,
+<a href="http://latex-project.org/ftp.html">LaTeX</a>, and <a href="http://www.lyx.org/">LyX</a>. Thanks to Alex Ames, here is
+a <a href="lyx_guide/lyx_tips.pdf">LyX guide</a> and associated <a href="lyx_guide/lyx_tips.zip">source files</a> used to generate it.</tr>
+<blockquote>
+<ul class="simple">
+</ul>
+</blockquote>
+</div>
+<div class="section" id="schedule">
+<h1>References</h1>
+<table class="docutils citation" frame="void" id="jk04" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#jk04">[JK04]</a></td><td>John H. Mathews and Kurtis K. Fink. <a class="reference external" href="http://www.amazon.com/Numerical-Methods-Using-Matlab-Edition/dp/0130652482">Numerical Methods using MATLAB</a>. Pearson, 4th edition, 2004.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="mh02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#mh02">[MH02]</a></td><td>Michael T. Heath. <a class="reference external" href="http://www.amazon.com/Scientific-Computing-Michael-T-Heath/dp/0072399104/ref=sr_1_1?s=books&ie=UTF8&qid=1421723991&sr=1-1&keywords=scientific+computing+heath&pebp=1421723994016&peasin=72399104">Scientific Computing</a>. McGraw Hill, 2nd edition, 2002.</td></tr>
+</tbody>
+</table>
+<!-- vim: ft=rst -->
+</div>
+</div>
+</body>
+</html>

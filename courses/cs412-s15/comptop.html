@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>Computational Topology: an introduction</title>
+<link rel="stylesheet" href="course.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="computational-topology-an-introduction">
+<h1 class="title">Computational Topology: an introduction</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr class="field"><th class="docinfo-name">Time:</th><td class="field-body">2:15 - 3:30pm, Tuesdays and Thursdays, Fall 2009.</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Place:</th><td class="field-body">Gates 498</td>
+</tr>
+<tr class="field"><th class="docinfo-name">Instructor:</th><td class="field-body"><a class="reference external" href="http://www.mrzv.org">Dmitriy Morozov</a>  (<a class="reference external" href="mailto:dmitriy&#64;mrzv.org">dmitriy&#64;mrzv.org</a>)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="announcements">
+<h1>Announcements</h1>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="homework1.pdf">Homework 1</a> is now available.</li>
+<li><a class="reference external" href="homework2.pdf">Homework 2</a> is now available.</li>
+<li><a class="reference external" href="homework3.pdf">Homework 3</a> is now available.</li>
+<li>Course project reports are due Sunday, December 6.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="schedule">
+<h1>Schedule</h1>
+<!-- This is a **tentative** schedule. -->
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Date</th>
+<th class="head">Topic</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Tu, Sep 22</td>
+<td>Introduction. Connected Components.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id1">[EH09]</a>  <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-I-1.pdf">Section I.1</a></p>
+<dl class="last docutils">
+<dt>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Graph_%28mathematics%29">Graph</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Topological_space">Topological space</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Connected_space">Connected space</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Disjoint_set_data_structure">Distjoint-set DS</a>.</dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr><td>Th, Sep 24</td>
+<td>Curves and Knots.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id3">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-I-2.pdf">Section I.2+3</a></p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Jordan_curve_theorem">Jordan Curve Theorem</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Knot_theory">Knot Theory</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Link_%28knot_theory%29">Links</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Computational_complexity">Complexity</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Sep 29</td>
+<td>Surfaces.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id5">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-II-1.pdf">Section II.1</a>. See <a class="citation-reference" href="#m00" id="id6">[M00]</a>  Sections 74,76,77 for rigorous
+treatment of polygonal schema, cutting pasting, and surface classification.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Surface">Surface</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Cross-cap">Cross-cap</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Real_projective_plane">Projective plane</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Klein_bottle">Klein bottle</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Th, Oct 1</td>
+<td>Fundamental Group. Homotopy.</td>
+<td><p class="first">HE's notes on <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-II-2.pdf">Fundamental Group</a> are not part of <a class="citation-reference" href="#eh09" id="id7">[EH09]</a>.</p>
+<blockquote>
+</blockquote>
+<p>Afra Zomorodian's notes provide concise and clear review of the
+relevant topics in <a class="reference external" href="http://www.cs.dartmouth.edu/~afra/ct/handouts/cs185-4.pdf">Group Theory</a>. He also hosts English
+translation of Markov's paper on <a class="reference external" href="http://www.cs.dartmouth.edu/~afra/goodies/markov.pdf">insolubility of homeomorphy</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Oct 6</td>
+<td>Simplicial Complexes.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id8">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-III-1.pdf">Section III.1</a></p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Simplex">Simplex</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Simplicial_complex">Simplicial complex</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Abstract_simplicial_complex">Abstract simplicial complex</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Barycentric_subdivision">Barycentric subdivision</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Oct 8</td>
+<td>Nerves.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id10">[EH09]</a> Sections <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-III-2.pdf">III.2</a>, <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-III-3.pdf">III.3</a>, <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-III-4.pdf">III.4</a>. <a class="citation-reference" href="#h01" id="id11">[H01]</a> <cite>Section 4.G</cite>, <a class="reference external" href="http://portal.acm.org/citation.cfm?doid=362342.362367">Bron-Kerbosch algorithm</a>.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Nerve_of_an_open_covering">Nerve</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex">Vietoris-Rips complex</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Voronoi_diagram">Voronoi diagram</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Delaunay_triangulation">Delaunay triangulation</a>.</p>
+<blockquote class="last">
+</blockquote>
+<!-- missing from Wikipedia: Cech complex, Alpha shapes. -->
+</td>
+</tr>
+<tr><td>Tu, Oct 13</td>
+<td>Homology. Matrix Reduction.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id12">[EH09]</a> Sections <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-IV-2.pdf">IV.1</a>, <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-IV-3.pdf">IV.2</a>.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Homology_%28mathematics%29">Homology</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Reduced_homology">Reduced homology</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Smith_normal_form">Smith normal form</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Oct 15</td>
+<td>Relative Homology.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id13">[EH09]</a> Section IV.3.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Relative_homology">Relative homology</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Exact_sequence">Exact sequence</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Oct 20</td>
+<td>Exact Sequences.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id14">[EH09]</a> Section IV.4.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Snake_lemma">Snake Lemma</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Mayer%E2%80%93Vietoris_sequence">Mayer-Vietoris sequence</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Oct 22</td>
+<td>Cohomology.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id15">[EH09]</a> Section V.1.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Cohomology">Cohomology</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Oct 27</td>
+<td>Poincare Duality.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id16">[EH09]</a> Section V.2.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Poincare_duality">Poincare duality</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Oct 29</td>
+<td>Alexander Duality.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id17">[EH09]</a> Section V.4.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Alexander_duality">Alexander duality</a>.</p>
+<blockquote class="last">
+</blockquote>
+<!-- Also briefly did Universal Coefficient Theorem -->
+</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Tu, Nov 3</td>
+<td>Smooth Generic Functions.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id18">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-V-1.pdf">Section VI.1</a>. <a class="citation-reference" href="#m02" id="id19">[M02]</a>.</p>
+<p>On Wikipedia: <a class="reference external" href="http://en.wikipedia.org/wiki/Morse_theory">Morse Theory</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Nov 5</td>
+<td>PL Functions.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id20">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-V-3.pdf">Section VI.3</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Nov 10</td>
+<td>Reeb graphs.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id21">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-V-4.pdf">Section VI.4</a>.</p>
+<blockquote class="last">
+</blockquote>
+<!-- Elevation? Mapper? -->
+</td>
+</tr>
+<tr><td>Th, Nov 12</td>
+<td>Persistent Homology.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id22">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-VI-1.pdf">Sections VII.1-2</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Tu, Nov 17</td>
+<td>Stability.</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id23">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-VI-2.pdf">Sections VIII.1-2</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Nov 19</td>
+<td>Zigzag Persistence.</td>
+<td><a class="citation-reference" href="#cds08" id="id24">[CdS08]</a>.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="schedule docutils">
+<colgroup>
+<col width="20%" />
+<col width="30%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Tu, Dec 1</td>
+<td>Extended Persistence</td>
+<td><p class="first"><a class="citation-reference" href="#eh09" id="id25">[EH09]</a> <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/Lectures/sec-VI-4.pdf">Section VII.3</a>.</p>
+<blockquote class="last">
+</blockquote>
+</td>
+</tr>
+<tr><td>Th, Dec 3</td>
+<td>Levelset Zigzag.</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="references">
+<h1>References</h1>
+<table class="docutils citation" frame="void" id="eh09" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[EH09]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>, <a class="fn-backref" href="#id5">3</a>, <a class="fn-backref" href="#id7">4</a>, <a class="fn-backref" href="#id8">5</a>, <a class="fn-backref" href="#id10">6</a>, <a class="fn-backref" href="#id12">7</a>, <a class="fn-backref" href="#id13">8</a>, <a class="fn-backref" href="#id14">9</a>, <a class="fn-backref" href="#id15">10</a>, <a class="fn-backref" href="#id16">11</a>, <a class="fn-backref" href="#id17">12</a>, <a class="fn-backref" href="#id18">13</a>, <a class="fn-backref" href="#id20">14</a>, <a class="fn-backref" href="#id21">15</a>, <a class="fn-backref" href="#id22">16</a>, <a class="fn-backref" href="#id23">17</a>, <a class="fn-backref" href="#id25">18</a>)</em> <p>Herbert Edelsbrunner and John Harer. Computational Topology: an Introduction.
+AMS Press, 2009.</p>
+<div class="note last">
+<p class="first admonition-title">Note</p>
+<p class="last">This book will not be available until January.
+However, it is a superset of <a class="reference external" href="http://www.cs.duke.edu/courses/fall06/cps296.1/">course notes</a> which can serve as a good
+supplement until the book is out.</p>
+</div>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cds08" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id24">[CdS08]</a></td><td>Gunnar Carlsson and Vin de Silva. <a class="reference external" href="http://arxiv.org/abs/0812.0197">Zigzag Persistence</a>. Manuscript, 2008.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="m02" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id19">[M02]</a></td><td>Yukio Matsumoto. <a class="reference external" href="http://www.amazon.com/Introduction-Theory-Translations-Mathematical-Monographs/dp/0821810227/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1253036485&amp;sr=8-1">An Introduction to Morse Theory</a>. AMS Press, 2002.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="h01" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[H01]</a></td><td>Allen Hatcher. <a class="reference external" href="http://www.math.cornell.edu/~hatcher/AT/ATpage.html">Algebraic Topology</a>. 2001.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="clrs01" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[CLRS01]</td><td>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford
+Stein. <a class="reference external" href="http://www.amazon.com/Introduction-Algorithms-Second-Thomas-Cormen/dp/0262032937/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1253038446&amp;sr=8-1">Introduction to Algorithms</a>. MIT Press, 2nd edition, 2001.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="m00" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[M00]</a></td><td>James R. Munkres. <a class="reference external" href="http://www.amazon.com/Topology-2nd-James-Munkres/dp/0131816292/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1254269724&amp;sr=8-1">Topology</a>. Prentice Hall, 2000.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="m84" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[M84]</td><td>James R. Munkres. <a class="reference external" href="http://www.amazon.com/Elements-Algebraic-Topology-James-Munkres/dp/0201627280/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1253038568&amp;sr=8-1">Elements of Algebraic Topology</a>. Perseus, 1984.</td></tr>
+</tbody>
+</table>
+<p class="acknowledgement">Leonidas Guibas and Dmitriy Morozov gratefully acknowledge the support to the
+Geometry Group provided by the <a class="reference external" href="http://forum.stanford.edu/">Computer Forum</a>
+during the 2009-10 academic year.</p>
+<!-- vim: ft=rst -->
+</div>
+</div>
+</body>
+</html>

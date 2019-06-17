@@ -1,0 +1,48 @@
+/* bengali */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hind Siliguri'), local('HindSiliguri-Regular'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/f2eEi2pbIa8eBfNwpUl0AitmK5NdMj7SMXnqwujOiyU.woff2) format('woff2');
+  unicode-range: U+0964-0965, U+0981-09FB, U+200B-200D, U+20B9, U+25CC;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hind Siliguri'), local('HindSiliguri-Regular'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/f2eEi2pbIa8eBfNwpUl0AitT3FIzPEO21-0D6YIrY1E.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hind Siliguri'), local('HindSiliguri-Regular'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/f2eEi2pbIa8eBfNwpUl0AhBCek7ZypUE9OFPg18vTTM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* bengali */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Hind Siliguri Medium'), local('HindSiliguri-Medium'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/fBpmjMpv5Rh6S25yVfWJn-usae0eUNv3sGpGY8WIDmc.woff2) format('woff2');
+  unicode-range: U+0964-0965, U+0981-09FB, U+200B-200D, U+20B9, U+25CC;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Hind Siliguri Medium'), local('HindSiliguri-Medium'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/fBpmjMpv5Rh6S25yVfWJnwkxZwHzYzQSWYFFXDR4AtY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Hind Siliguri Medium'), local('HindSiliguri-Medium'), url(https://fonts.gstatic.com/s/hindsiliguri/v1/fBpmjMpv5Rh6S25yVfWJnzeO7UKWTXK_MKhPYQqFnq0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

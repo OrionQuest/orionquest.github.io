@@ -1,0 +1,91 @@
+\documentclass{article}
+\author{}
+\usepackage{amscd, amssymb, amsthm, amsmath, graphicx, fancyhdr}
+\newtheorem{lemma}{Lemma}
+\newtheorem{openquestion}{Open question}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corrolary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{prob}{Problem}
+\title{CS412: Homework \#2}
+\author{Due: Tuesday, February 24th, 2015 (by 11:59PM)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent Sum of all problems: 120$\%$, Maximum possible score: $100\%$.
+\vspace{.2in}
+
+\noindent For the following problems, even if you do not answer a given
+question, you are still allowed to use its result in order to answer a
+subsequent question.
+
+\begin{enumerate}
+\item $[10\%]$
+Express the following polynomial in the correct form for evaluation by Horner's
+method:
+\begin{eqnarray*}
+p(t)=5t^3-3t^2+7t-2
+\end{eqnarray*}
+
+\item $[30\%]$ How many multiplications are required to evaluate a polynomial $p(t)$ of
+degree $n-1$ at a given point $t$
+\begin{enumerate}
+\item
+Represented in the monomial basis?
+\item
+Represented in the Lagrange basis?
+\item
+Represented in the Newton basis?
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item
+$[10\%]$ Determine the polynomial interpolant to the data
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ccccc}
+$t$ & $1$ & $2$ & $3$ & $4$ \\
+$y$ & $11$ & $29$ & $65$ & $125$
+\end{tabular}
+\end{center}
+\end{table}
+
+using the monomial basis.
+\item
+$[10\%]$ Determine the Lagrange polynomial interpolant to the same data and show that the
+resulting polynomial is equivalent to that obtained in part (a).
+
+\item
+$[30\%]$ Compute the Newton polynomial interpolant to the same data using each of the
+three methods discussed in class (triangular matrix, incremental interpolation,
+and divided differences) and show that each produces the same result as the
+previous two methods.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item
+$[15\%]$ For a given set of data points $t_1,\ldots,t_n$, define the function $\pi(t)$ by
+\begin{eqnarray*}
+\pi(t)=(t-t_1)(t-t_2)\ldots (t-t_n)
+\end{eqnarray*}
+
+Show that
+\begin{eqnarray*}
+\pi'(t_j)=(t_j-t_1)\ldots (t_j-t_{j-1})(t_j-t_{j+1})\ldots (t_j-t_n)
+\end{eqnarray*}
+
+\item
+$[15\%]$ Use the result of part (a) to show that the $j$th Lagrange basis function can be
+expressed as
+\begin{eqnarray*}
+l_j(t)=\frac{\pi(t)}{(t-t_j)\pi'(t_j)}
+\end{eqnarray*}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

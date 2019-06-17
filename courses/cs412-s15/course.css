@@ -1,0 +1,29 @@
+@import                 "html4css1.css";
+
+body                    { background-color: #A04040; padding: 0ex 0ex 0ex 0ex; margin: 0ex 0ex 0ex 0ex; }
+
+h1.title                { font-size: 220%; }
+div.document            
+{ 
+    margin: 2% 2% 2% 2%; 
+    /* padding: 0.5ex 2ex 1ex 2ex;  */
+    padding: 0% 2% 2% 2%;
+    font-family: sans-serif; 
+    background-color: white; 
+    border: solid 1px black; 
+}
+
+table                   { border: none; }
+td tr                   { padding: .2em; }
+
+table.docinfo           { margin: 0em 2em; }
+table.citation td.label { width: 5em; }
+table.citation          { border: none; margin: 0 0 0 0; }
+
+
+table.schedule          { border: 1px solid black; background-color: #FFFFCC; width: 100%; border-collapse: collapse; }
+th.schedule             { background-color: #FFFFAA; }
+
+div.note                { border: 1px solid black; background-color: #FFFFCC; margin: 1ex 1ex 5ex 1ex; }
+
+.acknowledgement        { font-size: 90%; text-align: center; margin: 5ex 1ex 0ex 1ex; border-top: solid 1px gray; }

@@ -1,0 +1,125 @@
+\documentclass{article}
+\author{}
+\usepackage{amscd, amssymb, amsthm, amsmath, graphicx, fancyhdr}
+\newtheorem{lemma}{Lemma}
+\newtheorem{openquestion}{Open question}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corrolary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{prob}{Problem}
+\title{CS412: Homework \#4}
+\author{Due: Tuesday, April 14th, 2015 (by 11:59PM)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent Sum of all problems: 120$\%$, Maximum possible score: $100\%$.
+\vspace{.2in}
+
+\begin{enumerate}
+\item $[60\%]$ In this problem, you will construct a proof that the Jacobi
+method converges when applied to matrices that are diagonally dominant. In the
+following subproblems, you are free to use any of the individual questions (even
+if you didn't prove it) to answer the ones that come after it.
+\begin{enumerate}
+\item $[15\%]$ If $x\in\mathbb R^n$ and $T$ is an $n\times n$ matrix, show that
+for any positive integer $k$ the following inequality holds:
+\begin{eqnarray*}
+||T^kx||\leq ||T||^k||x||
+\end{eqnarray*}
+\item $[5\%]$ Show that the Jacobi method can be written as
+\begin{eqnarray*}
+x^{(k+1)}=Tx^{(k)}+c
+\end{eqnarray*}
+where $T=D^{-1}(L+U)$ (using the decomposition $A=D-L-U$).
+\item $[10\%]$ Define the \emph{error} after the $k$th iteration to be
+$e^{(k)}=x^{(k)}-x^\star$, where $x^\star$ is the \emph{exact} solution to
+equation $Ax=b$. Show that:
+\begin{eqnarray*}
+e^{(k+1)}=Te^{(k)}
+\end{eqnarray*}
+\textbf{Hint:} You can use (after explaining why it is true) that
+$x^\star=Tx^\star+c$.
+\item $[15\%]$ If $A$ is diagonally dominant by rows, and $T$ is the matrix
+defined in (b) above, show that $||T||_\infty<1$.
+
+\noindent \textbf{Hint:} The way to prove this question may become more apparent
+if you write out explicitly what the first few rows of $T=D^{-1}(L+U)$ look
+like.
+\item $[15\%]$ Show that when $A$ is diagonally dominant by rows, then:
+\begin{eqnarray*}
+||e^{(k)}||_\infty\leq ||T||^k_\infty||e^{(0)}||_\infty
+\end{eqnarray*}
+Explain why this result implies that Jacobi is guaranteed to converge with
+diagonally dominant matrices.
+\end{enumerate}
+
+\item $[60\%]$ In this problem, you will show (in $2$ different ways) that the
+$QR$ factorization can, in fact, be used to construct the least squares solution
+of an overdetermined system. First, let us review some notation:
+
+\noindent Let $Ax=b$ be an overdetermined linear system of equations with $m$
+equations and $n$ unknowns, i.e., $A$ is an $m\times n$ matrix with $m>n$.
+Assume we have obtained the factorization $A=QR$ where $Q$ is an $m\times m$
+orthogonal matrix ($Q^TQ=QQ^T=I_{m\times m}$) and $R$ is an $m\times n$ upper
+triangular matrix ($[R]_{ij}=0$ when $i>j$). We also write $Q$ and $R$ in the
+following block form:
+\begin{eqnarray*}
+Q=\left(\hat Q|Q^\star\right), \enspace\enspace R=\left(
+\begin{array}{c}
+\hat R \\
+0_{(m-n)\times n}
+\end{array}
+\right)
+\end{eqnarray*}
+where $\hat Q\in\mathbb R^{m\times n}$ contains the first $m$ columns of $Q$,
+and $Q^\star\in\mathbb R^{m\times (m-n)}$ includes the last $m-n$ columns.
+Likewise, the upper triangular $n\times n$ matrix $\hat R$ contains the first
+$n$ rows of $R$. We will also assume that the columns of $A$ were linearly
+independent, and consequently according to the theory presented in class the
+diagonal elements of $R$ (and $\hat R$, too) are nonzero.
+\begin{enumerate}
+\item $[15\%]$ Show that the normal equations for this system can be written
+equivalently as
+\begin{eqnarray*}
+\hat R^T\hat Rx=\hat R^T\hat Q^Tb
+\end{eqnarray*}
+\item $[10\%]$ Show that the least squares solution can be obtained from the
+system
+\begin{eqnarray*}
+\hat Rx=\hat Q^Tb
+\end{eqnarray*}
+\item $[15\%]$ Show that the $2$-norm of the residual satisfies the equality:
+\begin{eqnarray*}
+||b-Ax||_2^2=||Q^Tb-Rx||_2^2
+\end{eqnarray*}
+\textbf{Hint:} You may use the equality $y^Ty=||y||_2^2$ which was proved in
+class. Expand both sides of the equality and show they are equal.
+\item $[5\%]$ Show that if $r_1\in\mathbb R^n$, $r_2\in\mathbb R^{m-n}$ and
+\begin{eqnarray*}
+r=\left(\begin{array}{c}
+r_1 \\
+r_2
+\end{array}
+\right)\in\mathbb R^m
+\end{eqnarray*}
+is the vector that results from stacking $r_1$ and $r_2$, then
+\begin{eqnarray*}
+||r||^2_2=||r_1||_2^2+||r_2||_2^2
+\end{eqnarray*}
+\item $[15\%]$ Show that the squared residual norm can also be written as:
+\begin{eqnarray*}
+||b-Ax||_2^2=||\hat Q^Tb-\hat Rx||_2^2+||Q^\star b||_2^2
+\end{eqnarray*}
+\textbf{Hint:} Replace $Q$ and $R$ with their block forms and use (d).
+
+\noindent \emph{The significance of the last expression is that the term $||\hat
+Q^Tb-\hat Rx||_2^2$ can be driven to zero by just using the $x$ which solves
+$\hat Rx=\hat Q^Tb$, while the term $||Q^\star b||_2^2$ which is independent of
+$x$ is the ``inevitable" minimum that the residual norm cannot go below.}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

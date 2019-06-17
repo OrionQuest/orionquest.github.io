@@ -1,0 +1,93 @@
+\documentclass{article}
+\author{}
+\usepackage{amscd, amssymb, amsthm, amsmath, graphicx, fancyhdr}
+\newtheorem{lemma}{Lemma}
+\newtheorem{openquestion}{Open question}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corrolary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{observation}{Observation}
+\newtheorem{prob}{Problem}
+\title{CS412: Homework \#3}
+\author{Due: Tuesday, March 24th, 2015 (by 11:59PM)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent Sum of all problems: 120$\%$, Maximum possible score: $100\%$.
+\vspace{.2in}
+
+\begin{enumerate}
+\item $[40\%]$ Prove the following properties:
+\begin{enumerate}
+\item
+Show that for any vector $x\in\mathbb R^n$, the following inequalities hold:
+\begin{eqnarray*}
+||x||_\infty\leq ||x||_1\leq n||x||_\infty \\
+||x||_\infty\leq ||x||_2\leq \sqrt{n}||x||_\infty
+\end{eqnarray*}
+\item
+Assume that positive constants $c_1,c_2$ exist, such that for any $x\in\mathbb
+R^n$
+\begin{eqnarray*}
+c_1||x||_a\leq ||x||_b\leq c_2||x||_a
+\end{eqnarray*}
+Here, $||\cdot||_a$ and $||\cdot||_b$ are simply two different vector norms.
+Show that in this case, we can also find positive constants $d_1,d_2$ such that
+\begin{eqnarray*}
+d_1||M||_a\leq ||M||_b\leq d_2||M||_a
+\end{eqnarray*}
+for any \emph{matrix} $M\in\mathbb R^{n\times n}$. The norms in the last
+expression are the matrix norms induced from the respective vector norms.
+\end{enumerate}
+\item
+$[20\%]$ Let
+\begin{eqnarray*}
+A=\left[
+\begin{array}{cc}
+1 & 1+\varepsilon \\
+1-\varepsilon & 1
+\end{array}
+\right]
+\end{eqnarray*}
+\begin{enumerate}
+\item
+What is the determinant of $A$?
+\item
+In single-precision arithmetic, for what range of values of $\varepsilon$ will
+the computed value of the determinant be zero?
+\item
+What is the $LU$ factorization of $A$?
+\item
+In single-precision arithmetic, for what range of values of $\varepsilon$ will
+the computed value of $U$ be singular?
+\end{enumerate}
+\newpage
+\item
+$[20\%]$ Prove the following, where $A,U,V$ are $n\times n$ matrices and $u,v$
+are $n\times1$ vectors:
+\begin{enumerate}
+\item
+The Sherman-Morrison formula:
+\begin{eqnarray*}
+(A-uv^T)^{-1}=A^{-1}+A^{-1}u(1-v^TA^{-1}u)^{-1}v^TA^{-1}
+\end{eqnarray*}
+\emph{Hint:} Multiply both sides by $(A-uv^T)$.
+\item
+The Woodbury formula:
+\begin{eqnarray*}
+(A-UV^T)^{-1}=A^{-1}+A^{-1}U(I-V^TA^{-1}U)^{-1}V^TA^{-1}
+\end{eqnarray*}
+\emph{Hint:} Multiply both sides by $(A-UV^T)$.
+\end{enumerate}
+\item $[40\%]$ Prove the following two statements:
+\begin{enumerate}
+\item
+The product of two lower triangular matrices is lower triangular.
+\item
+The inverse of a nonsingular lower triangular matrix is lower triangular.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
