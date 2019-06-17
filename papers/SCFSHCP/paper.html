@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A scalable Schur-complement fluids solver for heterogeneous compute platforms</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A scalable Schur-complement fluids solver for heterogeneous compute platforms</h1>
+<h2>Haixiang Liu, Nathan Mitchell, Mridul Aanjaneya and Eftychios Sifakis
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH Asia proceedings), 35, 6, 201:1-12 (2016)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/bronchi.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We present a scalable parallel solver for the pressure Poisson equation in fluids simulation which can accommodate complex irregular domains in the order of a billion degrees of freedom, using a single server or workstation fitted with GPU or Many-Core accelerators. The design of our numerical technique is attuned to the subtleties of heterogeneous computing, and allows us to benefit from the high memory and compute bandwidth of GPU accelerators even for problems that are too large to fit entirely on GPU memory. This is achieved via algebraic formulations that adequately increase the density of the GPU-hosted computation as to hide the overhead of offloading from the CPU, in exchange for accelerated convergence. Our solver follows the principles of Domain Decomposition techniques, and is based on the Schur complement method for elliptic partial differential equations. A large uniform grid is partitioned in non-overlapping subdomains, and bandwidth-optimized (GPU or Many-Core) accelerator cards are used to efficiently and concurrently solve independent Poisson problems on each resulting subdomain. Our novel contributions are centered on the careful steps necessary to assemble an accurate global solver from these constituent blocks, while avoiding excessive communication or dense linear algebra. We ultimately produce a highly effective Conjugate Gradients preconditioner, and demonstrate scalable and accurate performance on high-resolution simulations of water and smoke flow.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/domain_decomposition.pdf">Paper</a> | <a href="bib/SCFSHCP.html">BibTeX</a> | <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_I.mov">Video #1</a> | <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_II.mov">Video #2</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls">
+            <source src="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_I.mov" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_I.mov">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls">
+            <source src="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_II.mov" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/SCFSHCP/Final_Video_Part_II.mov">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
