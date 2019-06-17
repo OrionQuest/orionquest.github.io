@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Monolithic Mass Tracking Formulation for Bubbles in Incompressible Flow</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A Monolithic Mass Tracking Formulation for Bubbles in Incompressible Flow</h1>
+<h2>Mridul Aanjaneya, Saket Patkar and Ronald Fedkiw
+<br>
+<i>Journal of Computational Physics,</i> 247, 17-61 (2013)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/bubbles.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We devise a novel method for treating bubbles in incompressible flow that relies on the conservative advection of bubble mass and an associated equation of state in order to determine pressure boundary conditions inside each bubble. We show that executing this algorithm in a traditional manner leads to stability issues similar to those seen for partitioned methods for solid–fluid coupling. Therefore, we reformulate the problem monolithically. This is accomplished by first proposing a new fully monolithic approach to coupling incompressible flow to fully nonlinear compressible flow including the effects of shocks and rarefactions, and then subsequently making a number of simplifying assumptions on the air flow removing not only the nonlinearities but also the spatial variations of both the density and the pressure. The resulting algorithm is quite robust, has been shown to converge to known solutions for test problems, and has been shown to be quite effective on more realistic problems including those with multiple bubbles, merging and pinching, etc. Notably, this approach departs from a standard two-phase incompressible flow model where the air flow preserves its volume despite potentially large forces and pressure differentials in the surrounding incompressible fluid that should change its volume. Our bubbles readily change volume according to an isothermal equation of state.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="http://www.sciencedirect.com/science/article/pii/S002199911300226X">Paper</a> | <a href="bib/MMTFBIF.html">BibTeX</a> | <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/MMTFBIF/bubble_rising_past_spheres.mp4">Video</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 450px; height: 600px;">
+        <video controls="controls" poster="images/movie-still.png">
+            <source src="https://github.com/orionquest/orionquest.github.io/raw/master/papers/MMTFBIF/bubble_rising_past_spheres.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/MMTFBIF/bubble_rising_past_spheres.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>

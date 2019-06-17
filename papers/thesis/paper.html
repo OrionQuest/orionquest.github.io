@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Monolithic Mass Tracking Formulation for Bubbles in Incompressible Flow</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A Monolithic Mass Tracking Formulation for Bubbles in Incompressible Flow</h1>
+<h2>Mridul Aanjaneya
+<br>
+<i>Ph. D. Thesis,</i> Stanford University, May (2013)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/stanford.gif">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+This dissertation presents a novel method for treating bubbles in free surface
+incompressible flow that relies on the conservative advection of bubble mass and
+an associated equation of state in order to determine pressure boundary
+conditions inside each bubble. It is shown that executing this algorithm in a
+traditional manner leads to stability issues similar to those seen for
+partitioned methods for solid-fluid coupling. Therefore, the problem is
+reformulated monolithically. This is accomplished by first proposing a new fully
+monolithic approach to coupling incompressible flow to fully nonlinear
+compressible flow including the effects of shocks and rarefactions, and then
+subsequently making a number of simplifying assumptions on the air flow removing
+not only the nonlinearities but also the spatial variations of both the density
+and the pressure. The resulting algorithm is quite robust, has been shown to
+converge to known solutions for test problems, and has been shown to be quite
+effective on more realistic problems including those with multiple bubbles,
+merging and pinching, etc. Notably, this approach departs from a standard
+two-phase incompressible flow model where the air flow preserves its volume
+despite potentially large forces and pressure differentials in the surrounding
+incompressible fluid that should change its volume. The proposed method allows
+bubbles to readily change volume according to an isothermal equation of state.
+<br>
+<br>
+This method is then extended to model both large and small scale bubble
+dynamics. Small under-resolved bubbles are evolved using Lagrangian particles
+that are monolithically two-way coupled to the surrounding flow in a manner that
+closely approximates the analytic bubble oscillation frequency while converging
+to the analytic volume as predicted by the well-known Rayleigh-Plesset equation.
+A novel scheme is presented for interconverting between these under-resolved
+Lagrangian bubbles and the larger well-resolved Eulerian bubbles. A novel
+seeding mechanism is also presented to realistically generate bubbles when
+simulating fluid-structure interaction with complex objects such as ship
+propellers. The proposed framework for bubble generation is general enough to be
+incorporated into all grid-based as well as particle-based fluid simulation methods.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/thesis/thesis.pdf">Thesis</a>
+</div>
+
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
