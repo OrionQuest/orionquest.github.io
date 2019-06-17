@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Non-manifold Level Sets: A multivalued implicit surface representation with applications to self-collision processing</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Non-manifold Level Sets: A multivalued implicit surface representation with applications to self-collision processing</h1>
+<h2>Nathan Mitchell, Mridul Aanjaneya, Rajsekhar Setaluri and Eftychios Sifakis
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH Asia proceedings), 34, 6, 247:1-9 (2015)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/face-slice.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+Level sets have been established as highly versatile implicit surface representations, with widespread use in graphics applications including modeling and dynamic simulation. Nevertheless, level sets are often presumed to be limited, compared to explicit meshes, in their ability to represent domains with thin topological features (e.g. narrow slits and gaps) or, even worse, material overlap. Geometries with such features may arise from modeling tools that tolerate occasional self-intersections, fracture modeling algorithms that create narrow or zero-width cuts by design, or as transient states in collision processing pipelines for deformable objects. Converting such models to level sets can alter their topology if thin features are not resolved by the grid size. We argue that this ostensible limitation is not an inherent defect of the implicit surface concept, but a collateral consequence of the standard Cartesian lattice used to store the level set values. We propose storing signed distance values on a regular hexahedral mesh which can have multiple collocated cubic elements and non-manifold bifurcation to accommodate non-trivial topology. We show how such non-manifold level sets can be systematically generated from convenient alternative geometric representations. Finally we demonstrate how this representation can facilitate fast and robust treatment of self-collision in simulations of volumetric elastic deformable bodies.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/NMLSSCP/nonmanifold_levelsets.pdf">Paper</a> | <a href="bib/NMLSSCP.html">BibTeX</a> | <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/NMLSSCP/nonmanifold_levelsets.mp4">Video</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls" poster="images/movie-still.png">
+            <source src="https://github.com/orionquest/orionquest.github.io/raw/master/papers/NMLSSCP/nonmanifold_levelsets.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://github.com/orionquest/orionquest.github.io/raw/master/papers/NMLSSCP/nonmanifold_levelsets.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
