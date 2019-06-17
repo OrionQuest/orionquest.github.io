@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An Adaptive Variational Finite Difference Framework for Efficient Symmetric Octree Viscosity</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>An Adaptive Variational Finite Difference Framework for Efficient Symmetric Octree Viscosity</h1>
+<h2>Ryan Goldade, Yipeng Wang, Mridul Aanjaneya and Christopher Batty
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH proceedings), 38, 4, 94:1-14 (2019)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/octree_viscosity.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+While pressure forces are often the bottleneck in (near-)inviscid fluid simulations, viscosity can impose orders of magnitude greater computational costs at lower Reynolds numbers.
+We propose an implicit octree finite difference discretization that significantly accelerates the solution of the free surface viscosity equations using adaptive staggered grids, while supporting viscous buckling and rotation effects, variable viscosity, and interaction with scripted moving solids.
+In experimental comparisons against regular grids, our method reduced the number of active velocity degrees of freedom by as much as a factor of 7.7 and reduced linear system solution times by factors between 3.8 and 9.4.
+We achieve this by developing a novel adaptive variational finite difference methodology for octrees and applying it to the optimization form of the viscosity problem.
+This yields a linear system that is symmetric positive definite by construction, unlike naive finite difference/volume methods, and much sparser than a hypothetical finite element alternative.
+Grid refinement studies show spatial convergence at first order in L<sub>&infin;</sub> and second order in L<sub>1</sub>, while the significantly smaller size of the octree linear systems allows for the solution of viscous forces at higher effective resolutions than with regular grids.
+We demonstrate the practical benefits of our adaptive scheme by replacing the regular grid viscosity step of a commercial liquid simulator (Houdini) to yield large speed-ups, and by incorporating it into an existing inviscid octree simulator to add support for viscous flows.
+Animations of viscous liquids pouring, bending, stirring, buckling, and melting illustrate that our octree method offers significant computational gains and excellent visual consistency with its regular grid counterpart.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="octree_viscosity.pdf">Paper</a> | <a href="bib/AVFDFESOV.html">BibTeX</a> | <a href="octree_viscosity.mp4">Video</a> | <a href="tech_doc.pdf">Tech Doc</a> | <a href="https://github.com/rgoldade/AdaptiveViscositySolver">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls" poster="images/movie-still.png">
+            <source src="octree_viscosity.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="octree_viscosity.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
