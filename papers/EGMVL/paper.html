@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An Efficient Geometric Multigrid Solver for Viscous Liquids</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>An Efficient Geometric Multigrid Solver for Viscous Liquids</h1>
+<h2>Mridul Aanjaneya, Chengguizi Han, Ryan Goldade and Christopher Batty
+<br>
+<i>Proceedings of the ACM in Computer Graphics and Interactive Techniques</i> (SCA proceedings), 2, 2, 14:1-21, (2019)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/armadillo.jpg">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We present an efficient geometric Multigrid solver for simulating viscous
+liquids based on the variational approach of [Batty and
+Bridson 2008].  Although the governing equations for viscosity
+are elliptic, the strong coupling between different velocity components in the
+discrete stencils mandates the use of more exotic smoothing techniques to
+achieve textbook Multigrid efficiency.  Our key contribution is the design of a
+novel box smoother involving small and sparse systems (at most 9x9 in 2D
+and 15x15 in 3D), which yields excellent convergence rates and performance
+improvements of 3.5x - 13.8x over a na&iumlve Multigrid approach. We
+employ a hybrid approach by using a direct solver only inside the box smoother
+and keeping the remaining pipeline assembly-free, allowing our solver to
+efficiently accommodate more than 194 million degrees of freedom, while
+occupying a memory footprint of less than 16 GB. To reduce the computational
+overhead of using the box smoother, we precompute the Cholesky factorization of the
+subdomain system matrix for all interior degrees of freedom.
+We describe how the variational formulation, which requires volume weights computed at the centers
+of cells, edges, and faces, can be naturally accommodated in the Multigrid
+hierarchy to properly enforce boundary
+conditions.  Our proposed Multigrid solver serves as an excellent preconditioner
+for Conjugate Gradients, outperforming existing state-of-the-art alternatives.
+We demonstrate the efficacy of our method on several high resolution examples of viscous 
+liquid motion including two-way coupled interactions with rigid bodies.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="mgpcg_viscosity.pdf">Paper</a> | <a href="bib/EGMVL.html">BibTeX</a> | <a href="viscosity_multigrid_solver.mp4">Video</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px; height: 512px;">
+        <video controls="controls">
+            <source src="viscosity_multigrid_solver.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="viscosity_multigrid_solver.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
