@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Novel Discretization and Numerical Solver for Non-Fourier Diffusion</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A Novel Discretization and Numerical Solver for Non-Fourier Diffusion</h1>
+<h2>Tao Xue*, Haozhe Su*, Chengguizi Han, Chenfanfu Jiang and Mridul Aanjaneya (*Joint first authors)
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH proceedings), 39, 6, 1:1-14 (2020)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/snowflake_nonfourier.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We introduce the <i>C-F diffusion model</i> [Andreson and Tamma 2006; Xue et al. 2018] to computer graphics for diffusion-driven problems that has several attractive properties: (a) it fundamentally explains diffusion from the perspective of the non-equilibrium statistical mechanical Boltzmann Transport Equation, (b) it allows for a finite propagation speed for diffusion, in contrast to the widely employed Fick's/Fourier's law, and (c) it can capture some of the most characteristic visual aspects of diffusion-driven physics, such as hydrogel swelling, limited diffusive domain for smoke flow, snowflake and dendrite formation, that span from Fourier-type to non-Fourier-type diffusive phenomena. We propose a unified convection-diffusion formulation using this model that treats both the diffusive quantity <i>and</i> its associated flux as the primary unknowns, and that recovers the traditional Fourier-type diffusion as a limiting case. We design a novel semi-implicit discretization for this formulation on staggered MAC grids and a geometric Multigrid-preconditioned Conjugate Gradients solver for efficient numerical solution. To highlight the efficacy of our method, we demonstrate end-to-end examples of elastic porous media simulated with the Material Point Method (MPM), and diffusion-driven Eulerian incompressible fluids.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/8uosv6vlp0798e9uajwzb7hmz69r8rei.pdf">Paper</a> | <a href="bib/NDNSNFD.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/lhe99yv20mmnh6gkdz2vh7om84lqsh6a.mp4">Video</a> | <a href="https://rutgers.box.com/shared/static/wcyhyjddx001epximnvowk2zhkwy7e0v.zip">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/lhe99yv20mmnh6gkdz2vh7om84lqsh6a.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/lhe99yv20mmnh6gkdz2vh7om84lqsh6a.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
