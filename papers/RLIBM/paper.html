@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>An Approach to Generate Correctly-Rounded Math Libraries for New Floating-Point Variants</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>An Approach to Generate Correctly-Rounded Math Libraries for New Floating-Point Variants</h1>
+<h2>Jay Lim, Mridul Aanjaneya, John Gustafson and Santosh Nagarakatte
+<br>
+<i>Proceedings of the ACM on Programming Languages,</i> (POPL), 5, 29:1-30, (2021)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/rlibm.png">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+Given the importance of floating point (FP) performance in numerous domains, several new variants of FP and
+its alternatives have been proposed (<i>e.g.,</i> Bfloat16, TensorFloat32 and posits). These representations do
+not have correctly rounded math libraries. Further, the use of existing FP libraries for these new representations
+can produce incorrect results. This paper proposes a novel approach for generating polynomial approximations
+that can be used to implement correctly rounded math libraries. Existing methods generate polynomials that
+approximate the real value of an elementary function <i>f(x)</i> and produce wrong results due to approximation
+errors and rounding errors in the implementation. In contrast, our approach generates polynomials that
+approximate the correctly rounded value of <i>f(x)</i> (<i>i.e.,</i> the value of <i>f(x)</i> rounded to the target representation).
+It provides more margin to identify efficient polynomials that produce correctly rounded results for all inputs.
+We frame the problem of generating efficient polynomials that produce correctly rounded results as a linear
+programming problem. Using our approach, we have developed correctly rounded, yet faster, implementations
+of elementary functions for multiple target representations.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/elxyyhwmuh8wca23qjh3j6j4bygfr92e.pdf">Paper</a> | <a href="bib/RLIBM.html">BibTeX</a> | <a href="https://github.com/rutgers-apl/rlibm">Code</a>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
