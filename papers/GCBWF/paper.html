@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Graph Cities: Their Buildings, Waves, and Fragments</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Graph Cities: Their Buildings, Waves, and Fragments</h1>
+<h2>James Abello, Daniel Nakhimovich, Chengguizi Han and Mridul Aanjaneya
+<br>
+<i>4th International Workshop on Big Data Visual Exploration and Analytics,</i> (BigVis 2021), 4:1-8, (2021)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/friendster.jpg" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+''Graph Cities'' are 3D representations of maximal edge graph partitions. Each connected equivalence class corresponds to a ''Building'' that is formed by stacking graph ''Edge Fragments''. The number of such graph edge fragments determines the height of the building. The overall number of buildings is the number of equivalence classes in the edge partition. A poly-log bucketization of the size distribution of the equivalence classes is used to generate a 2D position for each bucket. For the buckets containing more than one equivalence class, we also generate a visual ''Bush'' representation. The Delaunay triangulation of these building locations determines the ''street network'' of the Graph City. The weight of a connection between two buildings on this street network is proportional to the intersection of the subgraph vertex sets represented by the two buildings. To handle equivalence classes (i.e., buildings) consisting of a large number of fragments, we use the notion of ''Graph Waves'' from [Abello and Nakhimovich 2020]. Graph Waves are intervals of graph edge fragments with a ''well-defined'' beginning and end fragment. For computational purposes, the beginning and end fragments should satisfy a computationally ''easy to verify'' property. We illustrate Graph Cities obtained with the maximal edge partitions defined by the iterative edge core decomposition introduced in [Abello and Queyroi 2013]. The graphs used include the Friendster social network (1.8 billion edges), a co-occurrence keywords network derived from the internet movie database (115 million edges), and a patents citation network (16.5 million edges). For graphs with up to 2 billion edges, all the elements of their corresponding Graph Cities are built in a few minutes (excluding I/O time) and storage proportional to the number of edges and vertices of a graph. Our ultimate goal is to obtain humanly-interpretable hierarchical descriptions of any graph that are accessible via a Unified Web Interface for Graph Analytics, without being constrained by the graph size.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/x1d2q3e8fg0e956caccphrg9derlqelw.pdf">Paper</a> | <a href="bib/GCBWF.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/h0z2kuwry7u1nvk5dlk0flcteynf93jo.mp4">Video</a> | <a href="https://rutgers.box.com/shared/static/ijeje5aq9rso0s0b8ve4ye1io1dougf0.pdf">Appendix</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls" poster="images/friendster.jpg">
+            <source src="https://rutgers.box.com/shared/static/h0z2kuwry7u1nvk5dlk0flcteynf93jo.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/h0z2kuwry7u1nvk5dlk0flcteynf93jo.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
