@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Unified Second-Order Accurate in Time MPM Formulation for Simulating Viscoelastic Liquids with Phase Change</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A Unified Second-Order Accurate in Time MPM Formulation for Simulating Viscoelastic Liquids with Phase Change</h1>
+<h2>Haozhe Su*, Tao Xue*, Chengguizi Han, Chenfanfu Jiang and Mridul Aanjaneya (*Joint first authors)
+<br>
+<i>ACM Transactions on Graphics</i> (SIGGRAPH proceedings), 40, 4, 1:1-18 (2021)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/3d_printing.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We assume that the viscous forces in any liquid are simultaneously <i>local</i> and <i>non-local</i>, and introduce the <i>extended POM-POM model</i> [Mcleish and Larson 1998; Oishi et al. 2012; Verbeeten et al. 2001] to computer graphics to design a unified constitutive model for viscosity that generalizes prior models, such as Oldroyd-B, the Upper-convected Maxwell (UCM) model [Sadeghy et al. 2005], and classical Newtonian viscosity under one umbrella, recovering each of them with different parameter values. Implicit discretization of our model via backward Euler recovers the variational Stokes solver of [Larionov et al. 2017] for Newtonian viscosity. For greater accuracy, however, we introduce the second-order accurate Generalized Single Step Single Solve (GS4) scheme [Tamma et al. 2000; Zhou and Tamma 2004] to computer graphics, which recovers all prior second-order accurate time integration schemes to date. Using GS4 and our generalized constitutive model, we present a Material Point Method (MPM) for simulating various viscoelastic liquid behaviors, such as classical liquid rope coiling, buckling, folding, and shear thinning/thickening. In addition, we show how to couple our viscoelastic liquid simulator with the recently introduced non-Fourier heat diffusion solver [Xue et al. 2020] for simulating problems with phase change, such as melting chocolate and digital fabrication with 3D printing. While the discretization of heat diffusion is slightly different within GS4, we show that it can still be efficiently solved using an assembly-free Multigrid-preconditioned Conjugate Gradients solver. We present end-to-end 3D simulations to demonstrate the versatility of our framework.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/siizgp97a5is0p2d4qqxknkw9ir4wanl.pdf">Paper</a> | <a href="bib/USOSVLPC.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/5qpq222qr7f79wxs5tj95jvsprbxzfzb.mp4">Video</a> | <a href="https://rutgers.box.com/shared/static/k9pr09vmic8tflwpadtyo0ehp7t2jnf4.zip">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/5qpq222qr7f79wxs5tj95jvsprbxzfzb.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/5qpq222qr7f79wxs5tj95jvsprbxzfzb.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
