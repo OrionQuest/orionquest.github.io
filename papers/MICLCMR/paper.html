@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Model Identification and Control of a Low-Cost Wheeled Mobile Robot Using Differentiable Physics</title>
+<title>Model Identification and Control of a Mobile Robot with Omnidirectional Wheels using Differentiable Physics</title>
 <link rel="stylesheet" type="text/css" href="../../css/style.css">
 
 </head>
@@ -31,10 +31,10 @@
 </div>
 
 <div class="content-box">
-<h1>Model Identification and Control of a Low-Cost Wheeled Mobile Robot Using Differentiable Physics</h1>
-<h2>Yanshi Luo, Abdeslam Boularias and Mridul Aanjaneya
+<h1>Model Identification and Control of a Mobile Robot with Omnidirectional Wheels using Differentiable Physics</h1>
+<h2>Edgar Granados, Abdeslam Boularias, Kostas Bekris and Mridul Aanjaneya
 <br>
-<i>arXiv</i> preprint (2020)</h2>
+(submitted to ICRA 2022)</h2>
 
 <table>
 <tbody><tr>
@@ -48,24 +48,22 @@
 <td align="justify"><p>
 <b>Abstract:</b>
 
-We present the design of a low-cost wheeled mobile robot, and an analytical model for predicting its motion under the influence of motor torques and friction forces. Using our proposed model, we show how to analytically compute the gradient of an appropriate loss function, that measures the deviation between predicted motion trajectories and real-world trajectories, which are estimated using Apriltags and an overhead camera. These analytical gradients allow us to automatically infer the unknown friction coefficients, by minimizing the loss function using gradient descent. Motion trajectories that are predicted by the optimized model are in excellent agreement with their real-world counterparts. Experiments show that our proposed approach is computationally superior to existing black-box system identification methods and other data-driven techniques, and also requires very few real-world samples for accurate trajectory prediction. The proposed approach combines
-the data efficiency of analytical models based on first principles, with the flexibility of data-driven methods, which makes it appropriate for low-cost robots. 
-Using the learned model and our gradient-based optimization approach, we show how to automatically compute motor control signals for driving the robot along pre-specified curves.
+We present a new data-driven technique for predicting the motion of a low-cost omnidirectional mobile robot under the influence of motor torques and friction forces. Our method utilizes a novel differentiable physics engine for analytically computing the gradient of the deviation between predicted motion trajectories and real-world trajectories. This allows to automatically learn and fine-tune the unknown friction coefficients on-the-fly, by minimizing a carefully designed loss function using gradient descent. Experiments show that the predicted trajectories are in excellent agreement with their real-world counterparts. Our proposed approach is computationally superior to existing black-box optimization methods, requiring very few real-world samples for accurate trajectory prediction compared to physics-agnostic techniques, such as neural networks. Experiments also demonstrate that the proposed method allows the robot to quickly adapt to changes in the terrain. Our proposed approach combines the data-efficiency of classical analytical models that are derived from first principles, with the flexibility of data-driven methods, which makes it appropriate for low-cost mobile robots.
 
 </p></td>
 </tr>
 </tbody></table>
 
 <div>
-<a href="https://arxiv.org/pdf/2009.11465.pdf">Paper</a> | <a href="MICLCMR.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/rprrj60ijcuj7uybo6klqzuav37zc1lr.mp4">Video</a>
+<a href="https://rutgers.box.com/shared/static/zmybvdw1m6esqitb3w7uo93ueidqnyal.pdf">Paper</a> | <a href="https://rutgers.box.com/shared/static/1cn8wlu5ma51s3toscdsnuzwr1bpkpks.mp4">Video</a>
 </div>
 
 <div id="videos">
     <div class="video_container" style="width: 720px;">
         <video controls="controls">
-            <source src="https://rutgers.box.com/shared/static/rprrj60ijcuj7uybo6klqzuav37zc1lr.mp4" type="video/mp4">
+            <source src="https://rutgers.box.com/shared/static/1cn8wlu5ma51s3toscdsnuzwr1bpkpks.mp4" type="video/mp4">
             I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
-            <a href="https://rutgers.box.com/shared/static/rprrj60ijcuj7uybo6klqzuav37zc1lr.mp4">Try downloading the video instead.</a>
+            <a href="https://rutgers.box.com/shared/static/1cn8wlu5ma51s3toscdsnuzwr1bpkpks.mp4">Try downloading the video instead.</a>
         </video>
     </div>
 </div>
