@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A-ULMPM: An Adaptively Updated Lagrangian Material Point Method for Efficient Physics Simulation without Numerical Fracture</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1><i>A</i>-ULMPM: An Adaptively Updated Lagrangian Material Point Method for Efficient Physics Simulation without Numerical Fracture</h1>
+<h2>Haozhe Su*, Tao Xue*, Chengguizi Han and Mridul Aanjaneya (*Joint first authors)
+<br>
+<i>Computer Graphics Forum,</i> (Eurographics proceedings), 41, 2, 1-17, (2022)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/water_in_sphere.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We present an adaptively updated Lagrangian Material Point Method (<i>A</i>-ULMPM) to alleviate non-physical artifacts, such as the cell-crossing instability and numerical fracture, that plague state-of-the-art Eulerian formulations of MPM, while still allowing for large deformations that arise in fluid simulations. <i>A</i>-ULMPM spans MPM discretizations from total Lagrangian formulations to Eulerian formulations. We design an easy-to-implement physics-based criterion that allows <i>A</i>-ULMPM to update the reference configuration <i>adaptively</i> for measuring physical states, including stress, strain, interpolation kernels and their derivatives. For better efficiency and conservation of angular momentum, we further integrate the APIC [Jiang et al. 2015] and MLS-MPM [Hu et al. 2018] formulations in <i>A</i>-ULMPM by augmenting the accuracy of velocity rasterization using both the local velocity and its first-order derivatives. Our theoretical derivations use a nodal discretized Lagrangian, instead of the weak form discretization in MLS-MPM [Hu et al. 2018], and naturally lead to a ''modified'' MLS-MPM in <i>A</i>-ULMPM, which can recover MLS-MPM using a completely Eulerian formulation. <i>A</i>-ULMPM does not require significant changes to traditional Eulerian formulations of MPM, and is computationally more efficient since it only updates interpolation kernels and their derivatives during large topology changes.
+We present end-to-end 3D simulations of stretching and twisting hyperelastic solids, viscous flows, splashing liquids,  and multi-material interactions with large deformations to demonstrate the efficacy of our new method.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/064j24ybh2pp0wkm0h311ti0g6w92fs9.pdf">Paper</a> | <a href="bib/AULMPM.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/odd219457fki2alzt73zxre2gh3jf9nk.mp4">Video</a> | <a href="https://rutgers.box.com/shared/static/5zxzbbibsvbxso153p0heib3thrxt0fc.zip">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/odd219457fki2alzt73zxre2gh3jf9nk.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/odd219457fki2alzt73zxre2gh3jf9nk.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>

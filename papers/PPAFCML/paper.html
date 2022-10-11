@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Progressive Polynomial Approximations for Fast Correctly Rounded Math Libraries</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Progressive Polynomial Approximations for Fast Correctly Rounded Math Libraries</h1>
+<h2>Mridul Aanjaneya, Jay P. Lim and Santosh Nagarakatte
+<br>
+<i>Programming Language Design and Implementation,</i> (PLDI proceedings), 552-565, (2022)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/progressive.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+This paper presents a novel method for generating a single polynomial approximation that produces correctly rounded results for all inputs of an elementary function for multiple representations. The generated polynomial approximation has the nice property that the first few lower degree terms produce correctly rounded results for specific representations of smaller bitwidths, which we call progressive performance. To generate such progressive polynomial approximations, we approximate the correctly rounded result and formulate the computation of correctly rounded polynomial approximations as a linear program similar to our prior work on the RLIBM project. To enable the use of resulting polynomial approximations in mainstream libraries, we want to avoid piecewise polynomials with large lookup tables. We observe that the problem of computing polynomial approximations for elementary functions is a linear programming problem in low dimensions, i.e., with a small number of unknowns. We design a fast randomized algorithm for computing polynomial approximations with progressive performance. Our method produces correct and fast polynomials that require a small amount of storage. A few polynomial approximations from our prototype have already been incorporated into LLVM’s math library.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/xhvsi8rzapnwhqxv1ejseyrrolc9hwqj.pdf">Paper</a> | <a href="bib/PPAFCML.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/qcbfbxfjxs4bqxbsp0xu5vrwzh9k9a1d.mp4">Video</a> | <a href="https://github.com/rutgers-apl/rlibm-prog">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/qcbfbxfjxs4bqxbsp0xu5vrwzh9k9a1d.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/qcbfbxfjxs4bqxbsp0xu5vrwzh9k9a1d.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
