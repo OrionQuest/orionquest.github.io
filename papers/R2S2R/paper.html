@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Real2Sim2Real Transfer for Control of Cable-driven Robots via a Differentiable Physics Engine</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Real2Sim2Real Transfer for Control of Cable-driven Robots via a Differentiable Physics Engine</h1>
+<h2>Kun Wang, William R. Johnson III, Shiyang Lu, Xiaonan Huang, Joran Booth, Rebecca Kramer-Bottiglio, Mridul Aanjaneya and Kostas Bekris
+<br>
+<i>IEEE/RSJ International Conference on Intelligent Robots and Systems,</i> (IROS proceedings), (2023)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/straight.jpg" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+Tensegrity robots, composed of rigid rods and flexible cables, exhibit high strength-to-weight ratios and significant deformations, which enable them to navigate unstructured terrains and survive harsh impacts. They are hard to control, however, due to high dimensionality, complex dynamics, and a coupled  architecture. Physics-based simulation is a promising avenue for developing locomotion policies that can be transferred to real robots.  Nevertheless, modeling tensegrity robots is a complex task due to a substantial sim2real gap. To address this issue, this paper describes a Real2Sim2Real (<tt>R2S2R</tt>) strategy for tensegrity robots. This strategy is based on a differentiable physics engine that can be trained given limited data from a real robot. These data include offline measurements of physical properties, such as mass and geometry for various robot components, and the observation of a trajectory using a random control policy.  With the data from the real robot, the engine can be iteratively refined and used to discover locomotion policies that are directly transferable to the real robot. Beyond the <tt>R2S2R</tt> pipeline, key contributions of this work include computing non-zero gradients at contact points, a loss function for matching tensegrity locomotion gaits, and a trajectory segmentation technique that avoids conflicts in gradient evaluation during training. Multiple iterations of the <tt>R2S2R</tt> process are demonstrated and evaluated on a real 3-bar tensegrity robot.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/fa7h7b1sb5mo2z942veai66w2ib4n2ct.pdf">Paper</a> | <a href="bib/R2S2R.html">BibTeX</a> | <a href="https://rutgers.box.com/shared/static/rf2atvf43p9yprggbp27l51ziv7gyw5x.mp4">Video</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/rf2atvf43p9yprggbp27l51ziv7gyw5x.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/rf2atvf43p9yprggbp27l51ziv7gyw5x.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
