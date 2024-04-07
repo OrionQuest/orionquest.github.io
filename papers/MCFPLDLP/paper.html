@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maximum Consensus Floating Point Solutions for Infeasible Low-dimensional Linear Programs with Convex Hull as the Intermediate Representation</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Maximum Consensus Floating Point Solutions for Infeasible Low-dimensional Linear Programs with Convex Hull as the Intermediate Representation</h1>
+<h2>Mridul Aanjaneya and Santosh Nagarakatte
+<br>
+<i>Proceedings of the ACM on Programming Languages,</i> (PLDI proceedings), 8, 197:1-25, (2024)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/maxfs_ldlp.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+This paper proposes a novel method to efficiently solve <i>infeasible</i> low-dimensional linear programs (LDLPs) with billions of constraints and a small number of unknown variables, where all the constraints cannot be satisfied simultaneously. We focus on infeasible linear programs generated in the <span style="font-variant: small-caps;">Rlibm</span> project for creating correctly rounded math libraries. Specifically, we are interested in generating a floating point solution that satisfies the maximum number of constraints. None of the existing methods can solve such large linear programs while producing floating point solutions.
+<br>
+<br>
+We observe that the convex hull can serve as an intermediate representation (IR) for solving infeasible LDLPs using the geometric duality between linear programs and convex hulls.  Specifically, some of the constraints that correspond to points on the convex hull are precisely those constraints that make the linear program infeasible. Our key idea is to split the entire set of constraints into two subsets using the convex hull IR: (a) a set <i>X</i> of feasible constraints and (b) an over-approximate superset <i>V</i> of infeasible constraints. Using the special structure of the <span style="font-variant: small-caps;">Rlibm</span> constraints and the presence of a method to check whether a system is feasible or not, we identify a superset of infeasible constraints by computing the convex hull in 2-dimensions. Subsequently, we identify the key constraints (<i>i.e.</i>, basis constraints) in the set of feasible constraints <i>X</i> and use them to create a new linear program whose solution identifies the maximum set of constraints satisfiable in <i>V</i> while satisfying all the constraints in <i>X</i>. This new solver enabled us to improve the performance of the resulting <span style="font-variant: small-caps;">Rlibm</span> polynomials while solving the corresponding large linear programs significantly faster.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/thqhw4rxz0mlz2t79vjmofpb04gvagjr.pdf">Paper</a> | <a href="bib/MCFPLDLP.html">BibTeX</a></a>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
