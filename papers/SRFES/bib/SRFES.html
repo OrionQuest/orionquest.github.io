@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Spectral Reordering for Faster Elasticity Simulations</title>
+</head>
+
+<body>
+<pre>
+@article{Flor:2024:SRFES,
+author = {Flor, Alon and Aanjaneya, Mridul},
+title = {Spectral Reordering for Faster Elasticity Simulations},
+journal={The Visual Computer},
+year={2024},
+month={Jul},
+day={01},
+volume={40},
+number={7},
+pages={5067-5077},
+abstract={We present a novel method for faster physics simulations of elastic solids. Our key idea is to reorder the unknown variables according to the Fiedler vector (i.e., the second-smallest eigenvector) of the combinatorial Laplacian. It is well known in the geometry processing community that the Fiedler vector brings together vertices that are geometrically nearby, causing fewer cache misses when computing differential operators. However, to the best of our knowledge, this idea has not been exploited to accelerate simulations of elastic solids which require an expensive linear (or non-linear) system solve at every time step. The cost of computing the Fiedler vector is negligible, thanks to an algebraic Multigrid-preconditioned Conjugate Gradients (AMGPCG) solver. We observe that our AMGPCG solver requires approximately 1 s for computing the Fiedler vector for a mesh with approximately 50K vertices or 100K tetrahedra. Our method provides a speed-up between {\$}{\$}10{\backslash}{\%}{\$}{\$}-- {\$}{\$}30{\backslash}{\%}{\$}{\$}at every time step, which can lead to considerable savings, noting that even modest simulations of elastic solids require at least 240 time steps. Our method is easy to implement and can be used as a plugin for speeding up existing physics simulators for elastic solids, as we demonstrate through our experiments using the Vega library and the ADMM solver, which use different algorithms for elasticity.},
+issn={1432-2315},
+doi={10.1007/s00371-024-03513-0},
+url={https://doi.org/10.1007/s00371-024-03513-0}
+}
+</pre>
+</body>
+</html>

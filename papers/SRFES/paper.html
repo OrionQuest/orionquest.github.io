@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Spectral Reordering for Faster Elasticity Simulations</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>Spectral Reordering for Faster Elasticity Simulations</h1>
+<h2>Alon Flor and Mridul Aanjaneya
+<br>
+<i>The Visual Computer,</i> (CGI proceedings), 40, 5067-5077, (2024)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/fiedler.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+We present a novel method for faster physics simulations of elastic solids. Our key idea is to re-order the unknown variables according to the Fiedler vector (i.e., the second smallest eigenvector) of the combinatorial Laplacian. It is well-known in the geometry processing community that the Fiedler vector brings together vertices that are geometrically nearby, causing fewer cache misses when computing differential operators. However, to the best of our knowledge, this idea has not been exploited to accelerate simulations of elastic solids which require an expensive linear (or non-linear) system solve at every time step. The cost of computing the Fiedler vector is negligible, thanks to an algebraic Multigrid-preconditioned Conjugate Gradients (AMGPCG) solver. We observe that our AMGPCG solver requires approximately 1 second for computing the Fiedler vector for a mesh with approximately <i>50K</i> vertices or <i>100K</i> tetrahedra. Our method provides a speed-up between <i>10% - 30%</i> at every time step, which can lead to considerable savings, noting that even modest simulations of elastic solids require at least <i>240</i> time steps. Our method is easy to implement and can be used as a plugin for speeding up existing physics simulators for elastic solids, as we demonstrate through our experiments using the Vega library and the ADMM solver, which use different algorithms for elasticity.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/gmp8wwdntva1q2zlt2ko6xd820gct4go.pdf">Paper</a> | <a href="https://rutgers.box.com/shared/static/1s9igqles04n36s7oec0oyt7zrqnmm7c.mp4">Video</a> | <a href="bib/SRFES.html">BibTeX</a></a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 640px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/1s9igqles04n36s7oec0oyt7zrqnmm7c.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/1s9igqles04n36s7oec0oyt7zrqnmm7c.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
