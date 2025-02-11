@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Closest Point Method for PDEs on Manifolds with Interior Boundary Conditions for Geometry Processing</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+</head>
+
+
+<body>
+<div class="title-box">
+<table width="100%"><tbody><tr><td align="left">
+        <font size="+8">Mridul Aanjaneya</font>
+        <table><tbody><tr>
+        <td>
+        <img src="../../images/knight_small.png" alt="[PHOTO]" align="left" style="width: 73px; height: 55px;">
+        </td>
+        <td>
+        Department of Computer Science
+        <br>
+        Rutgers University
+        </td>
+        </tr></tbody></table>
+        </td><td align="right">
+<span class="button"><a href="../../index.html">about me</a></span>
+<span class="button"><a href="../../teaching.html">teaching</a></span>
+<span class="button"><a href="../../research.html">research</a></span>
+<span class="button"><a href="../../contact.html">contact</a></span>
+        <img src="../../images/ru_logo.png" alt="[PHOTO]" align="top right" style="width: 142px; height: 110px;">
+</td></tr></tbody></table>
+</div>
+
+<div class="content-box">
+<h1>A Closest Point Method for PDEs on Manifolds with Interior Boundary Conditions for Geometry Processing</h1>
+<h2>Nathan King, Haozhe Su, Mridul Aanjaneya, Steven Ruuth and Christopher Batty
+<br>
+<i>ACM Transactions on Graphics</i> (presented at SIGGRAPH 2025), 43, 5, 159:1-26 (2024)</h2>
+
+<table>
+<tbody><tr>
+<td valign="center">
+<img alt="thumb" src="images/CPM.png" width="320">
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td align="justify"><p>
+<b>Abstract:</b>
+
+Many geometry processing techniques require the solution of partial differential equations (PDEs) on manifolds embedded in &reals;<sup>2</sup> or &reals;<sup>3</sup>, such as curves or surfaces. Such <i>manifold PDEs</i> often involve boundary conditions (e.g., Dirichlet or Neumann) prescribed at points or curves on the manifold's interior or along the geometric (exterior) boundary of an open manifold. However, input manifolds can take many forms (e.g., triangle meshes, parametrizations, point clouds, implicit functions, etc.). Typically, one must generate a mesh to apply finite element-type techniques or derive specialized discretization procedures for each distinct manifold representation. We propose instead to address such problems in a unified manner through a novel extension of the <i>closest point method</i> (CPM) to handle interior boundary conditions. CPM solves the manifold PDE by solving a volumetric PDE defined over the Cartesian embedding space containing the manifold, and requires only a closest point representation of the manifold. Hence, CPM supports objects that are open or closed, orientable or not, and of any codimension. To enable support for interior boundary conditions we derive a method that implicitly partitions the embedding space across interior boundaries. CPM's finite difference and interpolation stencils are adapted to respect this partition while preserving second-order accuracy. Additionally, we develop an efficient sparse-grid implementation and numerical solver that can scale to tens of millions of degrees of freedom, allowing PDEs to be solved on more complex manifolds. We demonstrate our method's convergence behaviour on selected model PDEs and explore several geometry processing problems: diffusion curves on surfaces, geodesic distance, tangent vector field design, harmonic map construction, and reaction-diffusion textures. Our proposed approach thus offers a powerful and flexible new tool for a range of geometry processing tasks on general manifold representations.
+
+</p></td>
+</tr>
+</tbody></table>
+
+<div>
+<a href="https://rutgers.box.com/shared/static/669yu0lon7sqvobrznq1qkibsx8ll6yb.pdf">Paper</a> | <a href="bib/CPMIBCGP.html">BibTeX</a> | <a href="https://youtu.be/Yicp5KdTlp4">Video</a> | <a href="https://github.com/nathandking/cpm-ibc">Code</a>
+</div>
+
+<div id="videos">
+    <div class="video_container" style="width: 720px;">
+        <video controls="controls">
+            <source src="https://rutgers.box.com/shared/static/jsjdkeqa8cj1tut7tbgy6flu0eeq9fze.mp4" type="video/mp4">
+            I'm sorry; your browser doesn't support HTML5 video in MP4 with H.264. 
+            <a href="https://rutgers.box.com/shared/static/jsjdkeqa8cj1tut7tbgy6flu0eeq9fze.mp4">Try downloading the video instead.</a>
+        </video>
+    </div>
+</div>
+</div>
+
+<p class="copyright" style="color: black;"> (C) Mridul Aanjaneya, All Rights Reserved.</p>
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img src="../../images/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    <a href="http://jigsaw.w3.org/css-validator/">
+        <img style="border:0;width:88px;height:31px" src="../../images/vcss.gif" alt="Valid CSS!">
+    </a>
+</p>
+
+</body></html>
